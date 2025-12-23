@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fire_challenge_path_graph"
+    app:startDestination="@id/fireChallengePathLoadFragment">
+
+    <fragment
+        android:id="@+id/fireChallengePathLoadFragment"
+        android:name="com.firechalang.pathapp.iotrtg.presentation.ui.load.FireChallengePathLoadFragment"
+        android:label="FireChallengePathLoadFragment" >
+        <action
+            android:id="@+id/action_fireChallengePathLoadFragment_to_fireChallengePathV"
+            app:destination="@id/fireChallengePathV"
+            app:popUpTo="@id/fire_challenge_path_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/fireChallengePathV"
+        android:name="com.firechalang.pathapp.iotrtg.presentation.ui.view.FireChallengePathV"
+        android:label="FireChallengePathV" />
+</navigation>

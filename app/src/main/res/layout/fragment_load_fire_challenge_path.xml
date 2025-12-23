@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/black"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/fireChallengePathBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fire_challenge_path_bg" />
+
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/fireChallengePathLoadingGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="fireChallengePathProgress, fireChallengePathProgressText" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/fireChallengePathStateGroup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:constraint_referenced_ids="fireChallengePathConnectionState" />
+
+    <TextView
+        android:id="@+id/fireChallengePathProgressText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="13dp"
+        android:fontFamily="@font/archivo_black"
+        android:shadowColor="@color/fire_challenge_path_border_color"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="10"
+        android:text="Loading..."
+        android:textColor="@color/fire_challenge_path_color"
+        android:textSize="35sp"
+        app:layout_constraintBottom_toTopOf="@+id/fireChallengePathProgress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/fireChallengePathProgress"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:indeterminateTint="@color/fire_challenge_path_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.65999997" />
+
+
+    <ImageView
+        android:id="@+id/fireChallengePathConnectionState"
+        android:layout_width="0dp"
+        android:layout_height="249dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.37"
+        app:srcCompat="@drawable/fire_challenge_path_state" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/fireChallengePathNotiGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="fireChallengePathNotifText,fireChallengePathGrandButton,fireChallengePathSkipButton,fireChallengePathNotifText2,fireChallengePathNotiBack" />
+
+    <ImageView
+        android:id="@+id/fireChallengePathNotiBack"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/fireChallengePathBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fire_challenge_path_portain_bg" />
+
+    <TextView
+        android:id="@+id/fireChallengePathNotifText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="11dp"
+        android:fontFamily="@font/archivo_black"
+        android:gravity="center"
+        android:shadowColor="@color/fire_challenge_path_border_color"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="5"
+        android:text="Allow notifications about bonuses and promos"
+        android:textColor="@color/fire_challenge_path_color"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/fireChallengePathNotifText2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:lineHeight="35dp" />
+
+    <Button
+        android:id="@+id/fireChallengePathGrandButton"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/fire_challenge_path_btn"
+        android:fontFamily="@font/archivo_black"
+        android:shadowColor="@color/fire_challenge_path_border_color"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="5"
+        android:text="Yes, I Want Bonuses!"
+        android:textColor="@color/fire_challenge_path_color"
+        app:layout_constraintBottom_toTopOf="@+id/fireChallengePathSkipButton"
+        app:layout_constraintEnd_toEndOf="@+id/fireChallengePathNotifText"
+        app:layout_constraintStart_toStartOf="@+id/fireChallengePathNotifText" />
+
+    <TextView
+        android:id="@+id/fireChallengePathSkipButton"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="13dp"
+        android:fontFamily="@font/archivo_black"
+        android:gravity="center"
+        android:shadowColor="@color/fire_challenge_path_border_color"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="5"
+        android:text="Skip"
+        android:textColor="@color/fire_challenge_path_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/fireChallengePathGrandButton"
+        app:layout_constraintStart_toStartOf="@+id/fireChallengePathGrandButton" />
+
+
+    <TextView
+        android:id="@+id/fireChallengePathNotifText2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/archivo_black"
+        android:gravity="center"
+        android:letterSpacing="0"
+        android:shadowColor="@color/fire_challenge_path_border_color"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="5"
+        android:text="Stay tuned with best offers from our casino"
+        android:textColor="@color/fire_challenge_path_color"
+
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/fireChallengePathGrandButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:lineHeight="35dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

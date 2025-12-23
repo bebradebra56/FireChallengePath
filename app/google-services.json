@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "783480649762",
+    "project_id": "firechallengepath",
+    "storage_bucket": "firechallengepath.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:783480649762:android:bf9765ab2b8e5eef0ab27b",
+        "android_client_info": {
+          "package_name": "com.firechalang.pathapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCB6GA1IeKH0kfVh5eIOD2sRTaacud9yCE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
